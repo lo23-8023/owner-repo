@@ -1,0 +1,23 @@
+hostname = "测试"
+instance_name = "easytier"
+instance_id = "bd6449ba-5ee0-4a0b-8c4b-91b16a6bbf4f"
+ipv6_public_addr_auto = false
+dhcp = true
+listeners = [
+    "tcp://0.0.0.0:11010",
+    "udp://0.0.0.0:11010",
+    "wg://0.0.0.0:11011",
+]
+
+[network_identity]
+network_name = "easytier"
+network_secret = "zhoupan123"
+
+[[peer]]
+uri = "txt://stuntcp.wen.gs"
+
+[[proxy_network]]
+cidr = "192.168.12.0/24"
+
+[flags]
+private_mode = true
